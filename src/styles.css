@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @import 'tailwindcss';
 
 :root {
@@ -5,7 +6,7 @@
   --jelly-bean: #dc5552;
   --aero-blue: #c3fde5;
   --bone: #e5dbc3;
-  --eerie-black: #1e1e1e;
+  --black-olive: #3a3a3a;
   --gray-asparagus: #405d4f;
   --fawn: #dab178;
   --persian-orange: #db915e;
@@ -16,10 +17,12 @@
   --color-jelly-bean: var(--jelly-bean);
   --color-aero-blue: var(--aero-blue);
   --color-bone: var(--bone);
-  --color-eerie-black: var(--eerie-black);
+  --color-black-olive: var(--black-olive);
   --color-gray-asparagus: var(--gray-asparagus);
   --color-fawn: var(--fawn);
   --color-persian-orange: var(--persian-orange);
+
+  --font-sans: 'Rubik';
 }
 
 /* ---------- SCROLLBAR ---------- */
