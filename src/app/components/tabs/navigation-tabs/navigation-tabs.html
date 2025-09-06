@@ -1,0 +1,23 @@
+<div class="flex p-2.5 gap-2.5 items-center justify-center my-2">
+  @for ( container of containers; track containers) {
+  <div
+    (click)="selectContainer(container)"
+    class="flex p-1 gap-2.5 rounded-full bg-persian-orange items-center transition-all overflow-hidden duration-300 ease-in-out"
+    [class]="activeContainer !== container ? 'w-10' : 'w-40'"
+  >
+    <img [src]="container.titleImg" alt="" class="w-8 h-8 object-cover flex-shrink-0" />
+    <p
+      class="font-semibold text-white text-center w-full pr-8 transition-all duration-300 ease-in-out"
+      [class]="activeContainer === container ? 'opacity-100 w-full' : 'opacity-0 max-w-0'"
+    >
+      {{ container.title }}
+    </p>
+  </div>
+
+  }
+</div>
+
+<!-- Show only active container's content -->
+@if (activeContainer) {
+<ng-container *ngTemplateOutlet="activeContainer.template"></ng-container>
+}

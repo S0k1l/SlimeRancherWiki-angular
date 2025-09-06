@@ -1,0 +1,20 @@
+<ng-template #containerTemplate>
+  <div class="flex w-full">
+    <div class="flex flex-col py-5 w-1/6">
+      @for (tab of tabs; track tab) {
+      <div
+        class="flex flex-col items-center rounded-l-xl py-1 font-semibold text-base text-eerie-black border-2 border-transparent border-r-0"
+        [class]="tab.active ? 'border-2 !border-gray-asparagus border-dashed' : ''"
+        (click)="selectTab(tab)"
+      >
+        <img [src]="tab.img" class="w-14 h-14" />
+        {{ tab.title }}
+      </div>
+      }
+    </div>
+
+    <div class="w-5/6">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</ng-template>

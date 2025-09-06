@@ -1,9 +1,49 @@
 @import 'tailwindcss';
 
+:root {
+  --deep-chestnut: #bd4a48;
+  --jelly-bean: #dc5552;
+  --aero-blue: #c3fde5;
+  --bone: #e5dbc3;
+  --eerie-black: #1e1e1e;
+  --gray-asparagus: #405d4f;
+  --fawn: #dab178;
+  --persian-orange: #db915e;
+}
+
 @theme {
-  --color-jelly-bean: #dc5552;
-  --color-aero-blue: #c3fde5;
-  --color-bone: #e5dbc3;
-  --color-eerie-black: #1e1e1e;
-  --color-gray-asparagus: #405d4f;
+  --color-deep-chestnut: var(--deep-chestnut);
+  --color-jelly-bean: var(--jelly-bean);
+  --color-aero-blue: var(--aero-blue);
+  --color-bone: var(--bone);
+  --color-eerie-black: var(--eerie-black);
+  --color-gray-asparagus: var(--gray-asparagus);
+  --color-fawn: var(--fawn);
+  --color-persian-orange: var(--persian-orange);
+}
+
+/* ---------- SCROLLBAR ---------- */
+
+/* width */
+.scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.scrollbar::-webkit-scrollbar-track {
+  background: lightgray;
+  border-radius: 10px;
+  margin: 10px 0 10px 0;
+}
+
+/* Handle */
+.scrollbar::-webkit-scrollbar-thumb {
+  background: var(--jelly-bean);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.scrollbar::-webkit-scrollbar-thumb:active,
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background: var(--deep-chestnut);
 }

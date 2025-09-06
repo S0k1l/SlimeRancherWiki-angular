@@ -1,0 +1,16 @@
+@if (active) {
+<div
+  class="rounded-3xl border-l-2 border-gray-asparagus border-dashed px-5 py-4 h-[502px] overflow-y-auto scrollbar"
+>
+  <div class="grid grid-cols-5 gap-2.5">
+    @for (item of data; track item) {
+    <div class="bg-fawn rounded-xl flex flex-col gap-2.5 items-center justify-center px-2 py-2.5">
+      <img [src]="item.imgUrl" alt="" class="w-18 h-18" />
+      <div class="flex h-full items-center">
+        <p class="font-semibold text-base text-eerie-black text-center h-fit">{{ item.name }}</p>
+      </div>
+    </div>
+    }
+  </div>
+</div>
+}
