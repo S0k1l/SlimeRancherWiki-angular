@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './title-tag.css',
 })
 export class TitleTag {
-  @Input() title: string = 'No Title';
+  @Input() text: string = 'No Title';
 }

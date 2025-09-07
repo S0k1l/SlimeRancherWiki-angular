@@ -8,7 +8,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './tab.css',
 })
 export class Tab {
-  @Input() title!: string;
+  @Input() name!: string;
   @Input() img?: string;
   @Input() path!: string;
   @Input() fetchData!: () => { id: string; name: string; imgUrl: string }[];

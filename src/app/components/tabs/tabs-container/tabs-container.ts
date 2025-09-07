@@ -17,7 +17,7 @@ import { Tab } from '../tab/tab';
 export class TabsContainer {
   @ContentChildren(Tab) tabs!: QueryList<Tab>;
 
-  @Input() title!: string;
+  @Input() name!: string;
   @Input() img!: string;
 
   get titleImg() {
