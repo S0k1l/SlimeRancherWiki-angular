@@ -1,18 +1,20 @@
 import { Component, Input } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-tab',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './tab.html',
   styleUrl: './tab.css',
 })
 export class Tab {
   @Input() title!: string;
   @Input() img?: string;
-  @Input() fetchData!: () => { name: string; imgUrl: string }[];
+  @Input() path!: string;
+  @Input() fetchData!: () => { id: string; name: string; imgUrl: string }[];
 
   active = false;
-  data: { name: string; imgUrl: string }[] = [];
+  data: { id: string; name: string; imgUrl: string }[] = [];
   private loaded = false; // track if data has already been loaded
 
   loadData() {

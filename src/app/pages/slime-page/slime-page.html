@@ -1,0 +1,39 @@
+<div
+  class="w-full md:w-4/5 2xl:w-2/3 mx-auto flex flex-col gap-2.5 rounded-4xl px-5 py-7.5 bg-bone relative"
+>
+  <app-title-tag [title]="slime.name" />
+  <div class="flex flex-col xl:flex-row gap-3 py-5">
+    <div class="flex items-center justify-center bg-fawn rounded-3xl flex-1">
+      <div class="max-w-96">
+        <img [src]="slime.imgUrl" alt="" [title]="slime.name" />
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 xl:grid-cols-4 gap-3 h-fit">
+      <app-info-item [imgUrl]="slime.diet.imgUrl" [itemName]="slime.diet.name" header="Дієта" />
+
+      <app-info-item
+        [imgUrl]="slime.favFood.imgUrl"
+        [itemName]="slime.favFood.name"
+        header="Юлюблене"
+        [route]="['/food', slime.favFood.id]"
+      />
+
+      <app-info-item
+        [imgUrl]="slime.toy.imgUrl"
+        [itemName]="slime.toy.name"
+        header="Іграшка"
+        [route]="['/toy', slime.toy.id]"
+      />
+
+      <app-info-item
+        [imgUrl]="slime.plort.imgUrl"
+        [itemName]="slime.plort.name"
+        header="Плорт"
+        [route]="['/plort', slime.plort.id]"
+      />
+
+      <app-info-group header="Локації" [items]="slime.locations" class="col-span-2 xl:col-span-4" />
+    </div>
+  </div>
+</div>

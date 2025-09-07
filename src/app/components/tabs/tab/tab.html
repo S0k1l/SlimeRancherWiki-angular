@@ -4,7 +4,8 @@
 >
   <div class="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-1 sm:gap-2.5">
     @for (item of data; track item) {
-    <div
+    <a
+      [routerLink]="[path, item.id]"
       class="bg-fawn rounded-2xl min-h-35.5 flex flex-col gap-2.5 items-center justify-center px-1 sm:px-2 py-2.5 transition-all duration-200 hover:scale-106"
     >
       <img [src]="item.imgUrl" alt="" class="w-18 h-18" />
@@ -15,7 +16,7 @@
           {{ item.name }}
         </p>
       </div>
-    </div>
+    </a>
     }
   </div>
 </div>

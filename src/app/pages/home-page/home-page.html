@@ -4,7 +4,12 @@
   <app-title-tag title="Навігація" />
   <app-navigation-tabs>
     <app-tabs-container title="Слайми" img="./slimes/Pink_Slime.webp">
-      <app-tab title="Маленькі" img="./slimes/Pink_Slime.webp" [fetchData]="fetchSlimes"></app-tab>
+      <app-tab
+        title="Маленькі"
+        img="./slimes/Pink_Slime.webp"
+        [fetchData]="fetchSlimes"
+        path="/slime"
+      ></app-tab>
     </app-tabs-container>
 
     <app-tabs-container title="Локації" img="./locations/Map_link_sr1_marker.webp">
