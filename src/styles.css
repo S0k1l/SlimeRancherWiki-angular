@@ -10,6 +10,7 @@
   --gray-asparagus: #405d4f;
   --fawn: #dab178;
   --persian-orange: #db915e;
+  --persian-orange-hover: #d18a5a;
 }
 
 @theme {
@@ -21,6 +22,7 @@
   --color-gray-asparagus: var(--gray-asparagus);
   --color-fawn: var(--fawn);
   --color-persian-orange: var(--persian-orange);
+  --color-persian-orange-hover: var(--persian-orange-hover);
 
   --font-sans: 'Rubik';
 }
