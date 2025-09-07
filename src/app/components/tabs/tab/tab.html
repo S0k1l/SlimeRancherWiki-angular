@@ -1,15 +1,19 @@
 @if (active) {
 <div
-  class="rounded-3xl border-l-2 border-slate-600 border-dashed px-5 py-4 h-[502px] overflow-y-auto scrollbar"
+  class="rounded-3xl sm:border-l-2 sm:border-t-0 border-t-2 border-slate-600 border-dashed px-2 sm:px-5 py-4 h-[468px] sm:h-[502px] overflow-y-auto scrollbar"
 >
-  <div class="grid grid-cols-5 grid-rows-2 gap-2.5">
+  <div class="grid grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-1 sm:gap-2.5">
     @for (item of data; track item) {
     <div
-      class="bg-fawn rounded-2xl h-full flex flex-col gap-2.5 items-center justify-center px-2 py-2.5 transition-all duration-200 hover:scale-106"
+      class="bg-fawn rounded-2xl min-h-35.5 flex flex-col gap-2.5 items-center justify-center px-1 sm:px-2 py-2.5 transition-all duration-200 hover:scale-106"
     >
       <img [src]="item.imgUrl" alt="" class="w-18 h-18" />
       <div class="flex h-full items-center">
-        <p class="font-semibold text-base text-black-olive text-center h-fit">{{ item.name }}</p>
+        <p
+          class="font-medium sm:font-semibold text-sm sm:text-base text-black-olive text-center h-fit"
+        >
+          {{ item.name }}
+        </p>
       </div>
     </div>
     }

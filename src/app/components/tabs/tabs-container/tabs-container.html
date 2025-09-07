@@ -1,20 +1,22 @@
 <ng-template #containerTemplate>
-  <div class="flex w-full pl-3">
-    <div class="flex items-end flex-col py-5 w-1/6">
+  <div class="flex flex-col sm:flex-row w-full sm:pl-3">
+    <div class="grid grid-cols-4 sm:flex items-end flex-col px-5 sm:py-5 sm:px-0 sm:w-1/6">
       @for (tab of tabs; track tab) {
       <div
-        class="flex flex-col items-center rounded-l-xl py-1 border-2 border-transparent border-dashed border-r-0 hover:bg-black/3 w-10/12 transition-[width] duration-200"
-        [class]="tab.active ? 'border-2 !border-slate-600  w-full' : ''"
+        class="flex flex-col items-center rounded-t-xl sm:rounded-l-xl sm:rounded-r-none py-1 border-2 border-transparent border-dashed border-b-0 sm:border-r-0 sm:border-b-2 hover:bg-black/3 sm:w-10/12 transition-[width] duration-200"
+        [class]="tab.active ? ' !border-slate-600 pb-3 sm:pb-1 sm:w-full' : ''"
         (click)="selectTab(tab)"
       >
         <img [src]="tab.img" class="w-14 h-14" />
 
-        <p class="font-medium text-base text-black-olive">{{ tab.title }}</p>
+        <p class="font-semibold sm:font-medium text-sm sm:text-base text-black-olive">
+          {{ tab.title }}
+        </p>
       </div>
       }
     </div>
 
-    <div class="w-5/6">
+    <div class="sm:w-5/6">
       <ng-content></ng-content>
     </div>
   </div>
