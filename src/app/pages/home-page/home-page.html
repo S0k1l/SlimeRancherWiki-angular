@@ -1,9 +1,5 @@
 <div class="w-3/5 mx-auto flex flex-col gap-2.5 rounded-4xl px-5 py-7.5 bg-bone relative">
-  <div
-    class="absolute px-8 py-2 rounded-md bg-persian-orange -top-5 left-0 right-0 mx-auto w-fit -skew-x-20"
-  >
-    <p class="uppercase font-semibold text-white skew-x-20">Навігація</p>
-  </div>
+  <app-title-tag title="Навігація" />
   <app-navigation-tabs>
     <app-tabs-container title="Слайми" img="./slimes/Pink_Slime.webp">
       <app-tab title="Маленькі" img="./slimes/Pink_Slime.webp" [fetchData]="fetchSlimes"></app-tab>

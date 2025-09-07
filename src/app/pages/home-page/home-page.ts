@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { TabsContainer } from '../../components/tabs/tabs-container/tabs-container';
 import { Tab } from '../../components/tabs/tab/tab';
 import { NavigationTabs } from '../../components/tabs/navigation-tabs/navigation-tabs';
+import { TitleTag } from '../../components/title-tag/title-tag';
 
 @Component({
   selector: 'app-home-page',
-  imports: [TabsContainer, Tab, NavigationTabs],
+  imports: [TabsContainer, Tab, NavigationTabs, TitleTag],
   templateUrl: './home-page.html',
   styleUrl: './home-page.css',
 })
@@ -107,20 +108,3 @@ export class HomePage {
     { id: '18', name: 'Золотий плорт', imgUrl: 'plorts/PlortGOLD.webp' },
   ];
 }
-
-// fetchData1 = () => [
-//   { name: 'Apple', img: '/newbucks.webp' },
-//   { name: 'Banana Banana', img: '/newbucks.webp' },
-//   { name: 'Cherry Cherry Cherry', img: '/newbucks.webp' },
-// ];
-// fetchData2 = () => [
-//   { name: 'Dog', img: '/newbucks.webp' },
-//   { name: 'Cat', img: '/newbucks.webp' },
-//   { name: 'Parrot', img: '/newbucks.webp' },
-// ];
-
-// fetchData3 = () => [
-//   { name: 'Car', img: '/newbucks.webp' },
-//   { name: 'Bike', img: '/newbucks.webp' },
-//   { name: 'Train', img: '/newbucks.webp' },
-// ];
