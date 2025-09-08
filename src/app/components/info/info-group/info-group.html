@@ -1,21 +1,36 @@
 <div
-  class="flex flex-col items-center w-full justify-start rounded-3xl border-dashed border-2 border-slate-600 p-3 gap-2"
+  class="flex flex-col items-center w-full h-full justify-start rounded-3xl border-dashed border-2 border-slate-600 p-3 gap-2"
 >
   <p class="w-full rounded-xl bg-persian-orange py-1.5 text-center font-semibold text-white">
     {{ header }}
   </p>
-  <div class="flex flex-wrap justify-center gap-1">
-    @for (item of items; track item) {
-    <div class="hover:scale-110 hover:bg-fawn/50 rounded-2xl transition-[scale] p-1 duration-300">
-      <img
-        [src]="item.imgUrl"
-        alt=""
-        class="w-13 h-13"
-        [routerLink]="[route, item.id]"
-        [title]="item.name"
-      />
-    </div>
+  <div class="flex items-center justify-center h-full">
+    <div class="flex flex-wrap justify-center gap-1">
+      @for (item of items; track item) {
+      <div
+        class="hover:scale-110 hover:bg-fawn/50 rounded-2xl relative transition-[scale] p-1 duration-300 min-w-14 h-14"
+      >
+        @if(item.quantity){
 
-    }
+        <img
+          [src]="item.imgUrl"
+          alt=""
+          class="w-11 h-11"
+          [routerLink]="[route, item.id]"
+          [title]="item.name"
+        />
+
+        <p class="absolute bottom-0 right-1 font-medium text-shadow-outline-1 text-white">
+          x{{ item.quantity }}
+        </p>
+        } @else {
+        <a [routerLink]="[route, item.id]">
+          <img [src]="item.imgUrl" alt="" class="w-13 h-13" [title]="item.name" />
+        </a>
+        }
+      </div>
+
+      }
+    </div>
   </div>
 </div>

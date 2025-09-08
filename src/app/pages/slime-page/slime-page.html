@@ -33,7 +33,12 @@
         [route]="['/plort', slime.plort.id]"
       />
 
-      <app-info-group header="Локації" [items]="slime.locations" class="col-span-2 xl:col-span-4" />
+      <app-info-group
+        header="Локації"
+        [items]="slime.locations"
+        class="col-span-2 xl:col-span-4"
+        route="/world"
+      />
     </div>
   </div>
 </div>

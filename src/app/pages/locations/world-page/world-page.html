@@ -1,0 +1,28 @@
+<div
+  class="w-full md:w-4/5 2xl:w-2/3 mx-auto flex flex-col gap-2.5 rounded-4xl px-5 py-7.5 bg-bone relative"
+>
+  <app-title-tag [text]="location.name" />
+  <div class="grid grid-cols-2 xl:grid-cols-5 gap-3 py-5">
+    <div
+      class="flex col-span-2 p-3 row-span-2 items-center justify-center bg-fawn rounded-3xl flex-1"
+    >
+      <div class="max-w-96">
+        <img [src]="location.imgUrl" alt="" [title]="location.name" />
+      </div>
+    </div>
+
+    <app-info-group header="Овочі" [items]="location.veggie" />
+    <app-info-group header="Фрукти" [items]="location.fruits" />
+    <app-info-group header="М'ясо" [items]="location.meat" />
+    <app-info-group header="Насос" [items]="location.pump" />
+    <app-info-group header="Пасіка" [items]="location.apiary" />
+    <app-info-group header="Бур" [items]="location.drill" />
+    <app-info-group header="Капсули" [items]="location.pods" class="col-span-2" />
+    <app-info-group
+      header="Слайми"
+      [items]="location.slimes"
+      class="col-span-2 xl:col-span-3"
+      route="/slime"
+    />
+  </div>
+</div>

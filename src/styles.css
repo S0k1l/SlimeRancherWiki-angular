@@ -25,6 +25,10 @@
   --color-persian-orange-hover: var(--persian-orange-hover);
 
   --font-sans: 'Rubik';
+
+  --text-shadow-outline-1: 1px 1px 0 var(--black-olive), 1px -1px 0 var(--black-olive),
+    -1px 1px 0 var(--black-olive), -1px -1px 0 var(--black-olive), 1px 0px 0 var(--black-olive),
+    0px 1px 0 var(--black-olive), -1px 0px 0 var(--black-olive), 0px -1px 0 var(--black-olive);
 }
 
 /* ---------- SCROLLBAR ---------- */

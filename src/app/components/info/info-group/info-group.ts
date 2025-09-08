@@ -10,5 +10,5 @@ import { RouterLink } from '@angular/router';
 export class InfoGroup {
   @Input() header: string = 'No header';
   @Input() route!: string;
-  @Input() items!: { id: string; imgUrl: string; name: string }[];
+  @Input() items!: { id: string; imgUrl: string; name: string; quantity?: number }[];
 }
